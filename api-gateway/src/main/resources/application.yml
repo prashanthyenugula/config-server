@@ -1,0 +1,29 @@
+spring:
+   application:
+     name: api-gateway-service
+   config:
+    import: "optional:configserver:http://localhost:8091/"
+
+#eureka:
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#server:
+#  port: 8090
+
+#  cloud:
+#    gateway:
+#      discovery:
+#        locator:
+#          enabled: true
+#          lower-case-service-id: true
+#      routes:
+#      - id: ORDER-SERVICE
+#        predicates:
+#        - Path=/api/v1/orders/getOrders
+#        uri: lb://ORDER-SERVICE/
+#      - id: CUSTOMER-SERVICE
+#        predicates:
+#        - Path=/api/v1/customer/getAll
+#        uri: lb://CUSTOMER-SERVICE/
+      
